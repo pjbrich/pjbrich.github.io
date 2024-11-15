@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "67228f773e95f3879af9f9d6"
+  },
+  "Name": "GEPS CAPS",
+  "Amount": 1374
+},
+{
+  "_id": {
+    "$oid": "67228f773e95f3879af9f9d7"
+  },
+  "Name": "BSTR",
+  "Amount": 1643
+},
+{
+  "_id": {
+    "$oid": "67228f773e95f3879af9f9d8"
+  },
+  "Name": "NEPS CAPPED",
+  "Amount": 180
+},
+{
+  "_id": {
+    "$oid": "67228f773e95f3879af9f9d9"
+  },
+  "Name": "NEPS UNCAPPED",
+  "Amount": 480
+},
+{
+  "_id": {
+    "$oid": "67360356a3d569b1d54a2a2d"
+  },
+  "Amount": "Unknown",
+  "Name": "GEPS"
+},
+{
+  "_id": {
+    "$oid": "67360561a3d569b1d54a2a30"
+  },
+  "name": "SAPS",
+  "Amount": "Unknown"
+},
+{
+  "_id": {
+    "$oid": "67360561a3d569b1d54a2a31"
+  },
+  "name": "NSPS",
+  "Amount": "Unknown"
+}]
