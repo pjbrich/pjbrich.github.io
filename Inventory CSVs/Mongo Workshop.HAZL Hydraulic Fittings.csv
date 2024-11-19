@@ -1,0 +1,90 @@
+_id,Description/Name,Part#,Supplier,#/RIG
+673c975ebe80e05651d0387b,Size 4 Steel Bulkhead Fitting,0306-4,Service Manufacturing Supply,29
+673c975ebe80e05651d0387c,Size 4 JIC Tube,0318-4,Service Manufacturing Supply,54
+673c975ebe80e05651d0387d,Size 4 JIC Tube Sleeve,0319-4,Service Manufacturing Supply,54
+673c975ebe80e05651d0387e,Size 4 JIC Male Connector,2404-4-4,Service Manufacturing Supply,1
+673c975ebe80e05651d0387f,Size 4 JIC Male Elbow ,2501-4-4,Service Manufacturing Supply,1
+673c975ebe80e05651d03880,Size 4 JIC Male 45 Degree Elbow,2503-4-4,Service Manufacturing Supply,1
+673c975ebe80e05651d03881,Size 4 JIC Bulkhead Union,2700-4,Service Manufacturing Supply,13
+673c975ebe80e05651d03882,Size 4 JIC Bulkhead Union Elbow,2701-4,Service Manufacturing Supply,7
+673c975ebe80e05651d03883,Size 4 JIC Bulkhead Union 45 Degree Elbow ,2702-4,Service Manufacturing Supply,7
+673c975ebe80e05651d03884,Size 4 JIC Bulkhead Run Tee,2704-4,Service Manufacturing Supply,1
+673c975ebe80e05651d03885,Size 4-8 JIC To O-Ring Connector,6400-04-08T00:00:00.000Z,Service Manufacturing Supply,1
+673c975ebe80e05651d03886,Size 4 JIC Swivel Nut Elbow,6500-4,Service Manufacturing Supply,2
+673c975ebe80e05651d03887,Size 4-6 JIC Swivel Nut Elbow,6500-4-6,Service Manufacturing Supply,1
+673c975ebe80e05651d03888,Size 4 JIC Swivel 45 Degree Elbow,6502-4,Service Manufacturing Supply,2
+673c975ebe80e05651d03889,Size 4-6 JIC to O-Ring Eblow Connector,6801-NWO-4-6,Service Manufacturing Supply,2
+673c975ebe80e05651d0388a,Size 4-8 JIC To O-Ring Eblow Connector,6801-NWO-4-8,Service Manufacturing Supply,17
+673c975ebe80e05651d0388b,Size 4-8 JIC To O-Ring 45 Degree Elbow,6802-NWO-4-8,Service Manufacturing Supply,3
+673c975ebe80e05651d0388c,Size 6 Steel Bulkhead Fitting ,0306-6,Service Manufacturing Supply,8
+673c975ebe80e05651d0388d,Size 6 JIC Tube Nut,0318-6,Service Manufacturing Supply,24
+673c975ebe80e05651d0388e,Size 6 Cap,0304-C-6,Service Manufacturing Supply,1
+673c975ebe80e05651d0388f,Size 6 JIC Tube Sleeve,0319-6,Service Manufacturing Supply,24
+673c975ebe80e05651d03890,Size 6 JIC Male Elbow,2501-6,Service Manufacturing Supply,2
+673c975ebe80e05651d03891,Size 6 JIC Bulkhead Union,2700-6,Service Manufacturing Supply,6
+673c975ebe80e05651d03892,Size 6 JIC Bulkhead Union Elbow,2701-6,Service Manufacturing Supply,1
+673c975ebe80e05651d03893,Size 6 JIC Bulkhead Union 45 Degree Elbow,2702-6,Service Manufacturing Supply,2
+673c975ebe80e05651d03894,Size 6 JIC To O-Ring Connector,6400-6,Service Manufacturing Supply,2
+673c975ebe80e05651d03895,Size 6-8 JIC to O-Ring Connector,6400-6-8,Service Manufacturing Supply,2
+673c975ebe80e05651d03896,Size 6 JIC Swivel Nut Elbow ,6500-6,Service Manufacturing Supply,2
+673c975ebe80e05651d03897,Size 6 JIC To O-Ring Elbow Connector,6801-NWO-6,Service Manufacturing Supply,6
+673c975ebe80e05651d03898,Size 6 JIC To O-Ring 45 Degree Elbow,6802-NWO-6,Service Manufacturing Supply,1
+673c975ebe80e05651d03899,Size 6-8 JIC To O-Ring  Elbow Connector,6801-NWO-6-8,Service Manufacturing Supply,3
+673c975ebe80e05651d0389a,Size 6-8 JIC To O-Ring Branch Tee,6802-NWO-6,Service Manufacturing Supply,2
+673c975ebe80e05651d0389b,Size 12 Steel Bulkhead Fitting,0306-12,Service Manufacturing Supply,20
+673c975ebe80e05651d0389c,Size 12 JIC Tube Nut,0318-12,Service Manufacturing Supply,32
+673c975ebe80e05651d0389d,Size 12 JIC Tube Sleeve,0319-12,Service Manufacturing Supply,32
+673c975ebe80e05651d0389e,Size 12-4 JIC Reducer,2406-12-4,Service Manufacturing Supply,1
+673c975ebe80e05651d0389f,Size 12 JIC Bulkhead Union,2700-12,Service Manufacturing Supply,12
+673c975ebe80e05651d038a0,Size 12 JIC Bulkhead Union 45 Degree Elbow,2702-12,Service Manufacturing Supply,8
+673c975ebe80e05651d038a1,Size 12 JIC Bulkhead Run Tee,2704-12,Service Manufacturing Supply,1
+673c975ebe80e05651d038a2,Size 12 JIC To O-Ring Connector ,6400-12,Service Manufacturing Supply,4
+673c975ebe80e05651d038a3,Size 12 JIC Swivel Nut Elbw,6500-12,Service Manufacturing Supply,4
+673c975ebe80e05651d038a4,Size 12-10 JIC To O-Ring Elbow Connector ,6801-NWO-12-10,Service Manufacturing Supply,1
+673c975ebe80e05651d038a5,Size 12 JIC To O-Ring Elbow Connector ,6801-NWO-12,Service Manufacturing Supply,4
+673c975ebe80e05651d038a6,Szie 16 Steel Bulkhead Fitting,0306-16,Service Manufacturing Supply,1
+673c975ebe80e05651d038a7,Size 16 JIC Tube Nut,0318-16,Service Manufacturing Supply,24
+673c975ebe80e05651d038a8,Size 16 JIC Tube Sleeve,0319-16,Service Manufacturing Supply,24
+673c975ebe80e05651d038a9,Size 16-4 JIC Reducer ,2406-16-4,Service Manufacturing Supply,2
+673c975ebe80e05651d038aa,Size 16-6 JIC Reducer ,2406-16-8,Service Manufacturing Supply,1
+673c975ebe80e05651d038ab,Size JIC Union Elbow,2500-16,Service Manufacturing Supply,1
+673c975ebe80e05651d038ac,Size 16 JIC Union Tee,2603-16,Service Manufacturing Supply,1
+673c975ebe80e05651d038ad,Size 16 JIC Bulkhead Run Tee,2704-16,Service Manufacturing Supply,1
+673c975ebe80e05651d038ae,Size 16 JIC To O-Ring Connector ,6400-16,Service Manufacturing Supply,2
+673c975ebe80e05651d038af,Size 16 JIC Swivel Nut Elbow,6500-16,Service Manufacturing Supply,2
+673c975ebe80e05651d038b0,Size 16 JIC Swivel Branch Tee,6600-16,Service Manufacturing Supply,2
+673c975ebe80e05651d038b1,Size 16-12 JIC To O-Ring Elbow Connector,6801-NWO-16-12,Service Manufacturing Supply,11
+673c975ebe80e05651d038b2,Size 16 JIC To O-Ring Eblow Connector,6801-NWO-16,Service Manufacturing Supply,3
+673c975ebe80e05651d038b3,Size 16-12 JIC To O-Ring 45 Degree Elbow,6802-NWO-16-12,Service Manufacturing Supply,1
+673c975ebe80e05651d038b4,Size 16 JIC To O-Ring 45 Degree Elbow,6802-NWO-16,Service Manufacturing Supply,2
+673c975ebe80e05651d038b5,Size 20 Steel Bulkhead Fitting,0306-20,Service Manufacturing Supply,2
+673c975ebe80e05651d038b6,Size JIC Tube Nut,0318-20,Service Manufacturing Supply,14
+673c975ebe80e05651d038b7,Size 20 JIC Tube Sleeve,0319-20,Service Manufacturing Supply,14
+673c975ebe80e05651d038b8,Size 20-6 JIC Reducer,2406-20-6,Service Manufacturing Supply,2
+673c975ebe80e05651d038b9,Size 20-16 JIC Reducer ,2406-20-16,Service Manufacturing Supply,3
+673c975ebe80e05651d038ba,Size 20 JIC Union Elbow,2500-20,Service Manufacturing Supply,4
+673c975ebe80e05651d038bb,Size 20 JIC Union Tee,2603-20,Service Manufacturing Supply,1
+673c975ebe80e05651d038bc,Size 20 JIC Bulkhead Union,2700-20,Service Manufacturing Supply,1
+673c975ebe80e05651d038bd,Size 20 Bulkhead Run Tee,2704-20,Service Manufacturing Supply,2
+673c975ebe80e05651d038be,Size 20-16 JIC To O-Ring Connector,6400-20-16,Service Manufacturing Supply,2
+673c975ebe80e05651d038bf,Size 20 JIC To O-Ring Connector ,6400-20,Service Manufacturing Supply,3
+673c975ebe80e05651d038c0,Size 20 JIC Swivel 45 Degree Elbow ,6502-20,Service Manufacturing Supply,1
+673c975ebe80e05651d038c1,Size 20 Female JIC Swivel Connector,6565-20,Service Manufacturing Supply,2
+673c975ebe80e05651d038c2,Size 20 JIC Swivel Run Tee,6602-20,Service Manufacturing Supply,1
+673c975ebe80e05651d038c3,Size 20 JIC To O-Ring Elbow Connector,6801-NWO-20,Service Manufacturing Supply,2
+673c975ebe80e05651d038c4,Size 20-12 JIC To O-Ring Elbow Connector,6801-NWO-20-12,Service Manufacturing Supply,1
+673c975ebe80e05651d038c5,Size 20-16 JIC To O-Ring 45 Degree Elbow,6801-NWO-20-16,Service Manufacturing Supply,1
+673c975ebe80e05651d038c6,Size 32 Female O-Ring To Male Pipe Adapter,6404-32,Service Manufacturing Supply,1
+673c975ebe80e05651d038c7,Size 32 JIC Swivel To Male Pipe Connector ,6505-32-32,Service Manufacturing Supply,1
+673c975ebe80e05651d038c8,"Size 4 (0.25"") Crimp On Fitting",04-04FJX,Service Manufacturing Supply,32
+673c975ebe80e05651d038c9,"Size 6 (0.375"") Crimp On Fitting ",06G-06FJX,Service Manufacturing Supply,7
+673c975ebe80e05651d038ca,"Size 6 (0.375"") Crimp On Fitting 45 Degree",06G-06FJX45,Service Manufacturing Supply,6
+673c975ebe80e05651d038cb,"Size 6 (0.375"") Crimp On Fitting 90 Degree",06G-0690FJX,Service Manufacturing Supply,1
+673c975ebe80e05651d038cc,"Size 12 (0.75"") Crimp On Fitting ",12G-12FJX,Service Manufacturing Supply,22
+673c975ebe80e05651d038cd,"Size 16 (1"") Crimp On Fitting",16G-16FJX,Service Manufacturing Supply,1
+673c975ebe80e05651d038ce,"Size 16 (1"") Crimp On Fitting 90 Degree",16G-16FJX90,Service Manufacturing Supply,1
+673c975ebe80e05651d038cf,"Size 20 (1.25"") Crimp On Fitting ",20G-20FJX,Service Manufacturing Supply,2
+673c975ebe80e05651d038d0,"Size 20 (1.25"") Crimp On Fitting 45 Degree",20G-20FJX45,Service Manufacturing Supply,1
+673c975ebe80e05651d038d1,"Size 20 (1.25"") Crimp On Fitting 90 Degree",20G-20FJX90,Service Manufacturing Supply,3
+673c9d20be80e05651d038d4, Size 16-12 JIC Reducer,2406-16-12,Service Manufacturing Supply,1
+673c9d20be80e05651d038d5,Size 16-20 JIC Reducer,2406-16-20,Service Manufacturing Supply,2
