@@ -8,7 +8,7 @@ from pymongo import MongoClient
 def fetch_documents(search_query=None):
     client = MongoClient('localhost', 27017) #update to QNAP once implemented
     db = client['Workshop']
-    collection = db['HAZL Hydraulic Fittings']
+    collection = db['Master Hydraulic Fittings']
 
     #our query is made up of Column Names (defined in the spreadsheet)
     # If there's a search query, use it to filter the documents
@@ -18,13 +18,15 @@ def fetch_documents(search_query=None):
                 {"Description/Name": {"$regex": search_query, "$options": "i"}},
                 {"Part#": {"$regex": search_query, "$options": "i"}},
                 {"Supplier": {"$regex": search_query, "$options": "i"}},
-                {"#/RIG": {"$regex": search_query, "$options": "i"}}
+                {"Current Stock": {"$regex": search_query, "$options": "i"}},
+                {"Comparison": {"$regex": search_query, "$options": "i"}},
+                {"Notes": {"$regex": search_query, "$options": "i"}}
             ]
         }
     else:
         query = {}
 
-    documents = list(collection.find(query, {"Description/Name":1, "Part#":1, "Supplier":1, "#/RIG":1, "_id":0}))
+    documents = list(collection.find(query, {"Description/Name":1, "Part#":1, "Supplier":1, "Current Stock":1, "Comparison":1,"Notes":1, "_id":0}))
     client.close()
     return documents
 #added a search_query for document fetching
@@ -35,8 +37,10 @@ def display_documents(search_query=None):
         name = doc.get("Description/Name", "N/A")
         partNO = doc.get("Part#", "N/A")
         supplier = doc.get("Supplier", "N/A")
-        perRIG = doc.get("#/RIG", "N/A")
-        text_widget.insert(tk.END, f"Name: {name}\nPart#: {partNO}\nSupplier#: {supplier}\nperRIG#: {perRIG}\n\n")
+        currentStock = doc.get("Current Stock", "N/A")
+        comparison = doc.get("Comparison", "N/A")
+        notes = doc.get("Notes","N/A")
+        text_widget.insert(tk.END, f"Name: {name}\nPart#: {partNO}\nSupplier#: {supplier}\n Current Stock: {currentStock}\nComparison#: {comparison}\nNotes: {notes} \n\n")
 
 #uses the search query to fetch doucments and displays them (since we're in display_document())
 def search():
