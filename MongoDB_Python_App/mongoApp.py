@@ -1,34 +1,51 @@
 # Created by: BGR - 10/30/2024
-# Updated on: 11/29/202
+# Updated on: 12/10/2024
 import tkinter as tk
 from tkinter import ttk
 from pymongo import MongoClient
 
-def fetch_documents():
-    client = MongoClient('localhost', 27017)
-    #db = client['Inventory']
-    #collection = db['Products']
+
+def fetch_documents(search_query=None):
+    client = MongoClient('localhost', 27017) #update to QNAP once implemented
     db = client['Workshop']
-    collection = db['HAZL Hydraulic Fittings']
+    collection = db['Master Hydraulic Fittings']
 
-    # x: 1 = show, x: 0 = no show
-    documents = list(collection.find({}, {"Description/Name":1, "Part#":1, "Supplier":1, "#/RIG":1, "_id":0}))
+    #our query is made up of Column Names (defined in the spreadsheet)
+    # If there's a search query, use it to filter the documents
+    if search_query:
+        query = {
+            "$or": [
+                {"Description/Name": {"$regex": search_query, "$options": "i"}},
+                {"Part#": {"$regex": search_query, "$options": "i"}},
+                {"Supplier": {"$regex": search_query, "$options": "i"}},
+                {"Current Stock": {"$regex": search_query, "$options": "i"}},
+                {"Comparison": {"$regex": search_query, "$options": "i"}},
+                {"Notes": {"$regex": search_query, "$options": "i"}}
+            ]
+        }
+    else:
+        query = {}
 
-    # Only retrieve Name and Amount fields
-    #documents = list(collection.find({}, {"Name": 1, "Amount": 1, "_id": 0}))
+    documents = list(collection.find(query, {"Description/Name":1, "Part#":1, "Supplier":1, "Current Stock":1, "Comparison":1,"Notes":1, "_id":0}))
     client.close()
     return documents
-
-def display_documents():
-    documents = fetch_documents()
+#added a search_query for document fetching
+def display_documents(search_query=None):
+    documents = fetch_documents(search_query) #uses search_query to "look" into each document, we can find multiple results this way. 
     text_widget.delete('1.0', tk.END)  # Clear existing text
-    #Loops through different elements of each document and prints them to screen
     for doc in documents:
         name = doc.get("Description/Name", "N/A")
         partNO = doc.get("Part#", "N/A")
         supplier = doc.get("Supplier", "N/A")
-        perRIG = doc.get("#/RIG", "N/A")
-        text_widget.insert(tk.END, f"Name: {name}\nPart#: {partNO}\nSupplier#: {supplier}\nperRIG#: {perRIG}\n\n")
+        currentStock = doc.get("Current Stock", "N/A")
+        comparison = doc.get("Comparison", "N/A")
+        notes = doc.get("Notes","N/A")
+        text_widget.insert(tk.END, f"Name: {name}\nPart#: {partNO}\nSupplier#: {supplier}\n Current Stock: {currentStock}\nComparison#: {comparison}\nNotes: {notes} \n\n")
+
+#uses the search query to fetch doucments and displays them (since we're in display_document())
+def search():
+    query = search_entry.get()
+    display_documents(query)
 
 # Create the main window
 root = tk.Tk()
@@ -39,6 +56,16 @@ root.geometry("800x600")
 frame = ttk.Frame(root, padding="10")
 frame.pack(fill=tk.BOTH, expand=True)
 
+# Create a search bar
+search_frame = ttk.Frame(frame)
+search_frame.pack(fill=tk.X, pady=(0, 10))
+
+search_entry = ttk.Entry(search_frame)
+search_entry.pack(side=tk.LEFT, expand=True, fill=tk.X)
+
+search_button = ttk.Button(search_frame, text="Search", command=search)
+search_button.pack(side=tk.RIGHT)
+
 # Create a text widget with scrollbar
 text_widget = tk.Text(frame, wrap=tk.WORD, width=50, height=15)
 scrollbar = ttk.Scrollbar(frame, orient="vertical", command=text_widget.yview)
@@ -48,10 +75,8 @@ text_widget.configure(yscrollcommand=scrollbar.set)
 text_widget.pack(side="left", fill=tk.BOTH, expand=True)
 scrollbar.pack(side="right", fill="y")
 
-#need to make a window for 
-
 # Create and pack a refresh button
-refresh_button = ttk.Button(root, text="Refresh", command=display_documents)
+refresh_button = ttk.Button(root, text="Refresh", command=lambda: display_documents())
 refresh_button.pack(pady=10)
 
 # Initial display of documents
