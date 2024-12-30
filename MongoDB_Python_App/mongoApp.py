@@ -1,17 +1,15 @@
 # Created by: BGR - 10/30/2024
-# Updated on: 12/10/2024
-import tkinter as tk
-from tkinter import ttk
-from pymongo import MongoClient
+# Updated on: 12/27/2024
 
+import tkinter as tk
+from tkinter import ttk, messagebox
+from pymongo import MongoClient
 
 def fetch_documents(search_query=None):
     client = MongoClient('localhost', 27017) #update to QNAP once implemented
     db = client['Workshop']
     collection = db['Master Hydraulic Fittings']
 
-    #our query is made up of Column Names (defined in the spreadsheet)
-    # If there's a search query, use it to filter the documents
     if search_query:
         query = {
             "$or": [
@@ -26,26 +24,66 @@ def fetch_documents(search_query=None):
     else:
         query = {}
 
-    documents = list(collection.find(query, {"Description/Name":1, "Part#":1, "Supplier":1, "Current Stock":1, "Comparison":1,"Notes":1, "_id":0}))
+    documents = list(collection.find(query))
     client.close()
     return documents
-#added a search_query for document fetching
+
 def display_documents(search_query=None):
-    documents = fetch_documents(search_query) #uses search_query to "look" into each document, we can find multiple results this way. 
-    text_widget.delete('1.0', tk.END)  # Clear existing text
+    documents = fetch_documents(search_query)
+    text_widget.delete('1.0', tk.END)
     for doc in documents:
+        id_str = str(doc.get("_id", "N/A"))
         name = doc.get("Description/Name", "N/A")
         partNO = doc.get("Part#", "N/A")
         supplier = doc.get("Supplier", "N/A")
         currentStock = doc.get("Current Stock", "N/A")
         comparison = doc.get("Comparison", "N/A")
-        notes = doc.get("Notes","N/A")
-        text_widget.insert(tk.END, f"Name: {name}\nPart#: {partNO}\nSupplier#: {supplier}\n Current Stock: {currentStock}\nComparison#: {comparison}\nNotes: {notes} \n\n")
+        notes = doc.get("Notes", "N/A")
+        text_widget.insert(tk.END, f"ID: {id_str}\nName: {name}\nPart#: {partNO}\nSupplier#: {supplier}\nCurrent Stock: {currentStock}\nComparison#: {comparison}\nNotes: {notes}\n\n")
 
-#uses the search query to fetch doucments and displays them (since we're in display_document())
 def search():
     query = search_entry.get()
     display_documents(query)
+
+def update_document():
+    query = search_entry.get()
+    if not query:
+        tk.messagebox.showerror("Error", "Please enter a Part# to update")
+        return
+
+    update_window = tk.Toplevel(root)
+    update_window.title("Update Document")
+    update_window.geometry("400x300")
+
+    fields = ["Description/Name", "Part#", "Supplier", "Current Stock", "Comparison", "Notes"]
+    entries = {}
+
+    for field in fields:
+        frame = ttk.Frame(update_window)
+        frame.pack(fill=tk.X, padx=5, pady=5)
+        ttk.Label(frame, text=field).pack(side=tk.LEFT)
+        entry = ttk.Entry(frame)
+        entry.pack(side=tk.RIGHT, expand=True, fill=tk.X)
+        entries[field] = entry
+
+    def save_update():
+        client = MongoClient('localhost', 27017)
+        db = client['Workshop']
+        collection = db['Master Hydraulic Fittings']
+
+        update_data = {field: entry.get() for field, entry in entries.items() if entry.get()}
+        result = collection.update_one({"Part#": query}, {"$set": update_data})
+
+        if result.modified_count > 0:
+            tk.messagebox.showinfo("Success", "Document updated successfully")
+            display_documents(query)
+        else:
+            tk.messagebox.showerror("Error", "No document found with the given Part#")
+
+        client.close()
+        update_window.destroy()
+
+    ttk.Button(update_window, text="Save", command=save_update).pack(pady=10)
 
 # Create the main window
 root = tk.Tk()
@@ -78,6 +116,10 @@ scrollbar.pack(side="right", fill="y")
 # Create and pack a refresh button
 refresh_button = ttk.Button(root, text="Refresh", command=lambda: display_documents())
 refresh_button.pack(pady=10)
+
+# Create and pack an update button
+update_button = ttk.Button(root, text="Update", command=update_document)
+update_button.pack(pady=10)
 
 # Initial display of documents
 display_documents()
