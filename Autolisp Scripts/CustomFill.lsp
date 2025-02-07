@@ -1,3 +1,6 @@
+;; Will fill an AutoCAD polyline with a block at a specified interval
+;; 02/07/2025
+;; Created by Benjamin Richards
 (defun c:PopulatePolylineWithBlock (/ pline blockName interval dist pt param)
   ;; Prompt the user to select a polyline
   (setq pline (car (entsel "\nSelect a polyline: ")))
