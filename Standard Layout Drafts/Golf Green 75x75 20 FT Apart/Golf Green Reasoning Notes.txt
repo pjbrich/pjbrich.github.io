@@ -1,0 +1,3 @@
+This is a design for Golf Green - Average Size for a Golf Green is 5625 Square feet or 75ft x 75 ft. 
+Each line is 68ft long and are kept 20ft apart due to the small area size. 
+Design uses 2 40' units on opposite corners that are 90 ft apart.
