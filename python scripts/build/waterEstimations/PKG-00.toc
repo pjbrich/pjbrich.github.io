@@ -1,4 +1,4 @@
-('C:\\Users\\Exlterra CAD 02\\Documents\\Github\\pjbrich.github.io\\python '
+('C:\\Users\\Exlterra CAD 02\\Documents\\GitHub\\pjbrich.github.io\\python '
  'scripts\\build\\waterEstimations\\waterEstimations.pkg',
  {'BINARY': True,
   'DATA': True,
@@ -11,27 +11,27 @@
   'SYMLINK': False},
  [('pyi-contents-directory _internal', '', 'OPTION'),
   ('PYZ-00.pyz',
-   'C:\\Users\\Exlterra CAD 02\\Documents\\Github\\pjbrich.github.io\\python '
+   'C:\\Users\\Exlterra CAD 02\\Documents\\GitHub\\pjbrich.github.io\\python '
    'scripts\\build\\waterEstimations\\PYZ-00.pyz',
    'PYZ'),
   ('struct',
-   'C:\\Users\\Exlterra CAD 02\\Documents\\Github\\pjbrich.github.io\\python '
+   'C:\\Users\\Exlterra CAD 02\\Documents\\GitHub\\pjbrich.github.io\\python '
    'scripts\\build\\waterEstimations\\localpycs\\struct.pyc',
    'PYMODULE'),
   ('pyimod01_archive',
-   'C:\\Users\\Exlterra CAD 02\\Documents\\Github\\pjbrich.github.io\\python '
+   'C:\\Users\\Exlterra CAD 02\\Documents\\GitHub\\pjbrich.github.io\\python '
    'scripts\\build\\waterEstimations\\localpycs\\pyimod01_archive.pyc',
    'PYMODULE'),
   ('pyimod02_importers',
-   'C:\\Users\\Exlterra CAD 02\\Documents\\Github\\pjbrich.github.io\\python '
+   'C:\\Users\\Exlterra CAD 02\\Documents\\GitHub\\pjbrich.github.io\\python '
    'scripts\\build\\waterEstimations\\localpycs\\pyimod02_importers.pyc',
    'PYMODULE'),
   ('pyimod03_ctypes',
-   'C:\\Users\\Exlterra CAD 02\\Documents\\Github\\pjbrich.github.io\\python '
+   'C:\\Users\\Exlterra CAD 02\\Documents\\GitHub\\pjbrich.github.io\\python '
    'scripts\\build\\waterEstimations\\localpycs\\pyimod03_ctypes.pyc',
    'PYMODULE'),
   ('pyimod04_pywin32',
-   'C:\\Users\\Exlterra CAD 02\\Documents\\Github\\pjbrich.github.io\\python '
+   'C:\\Users\\Exlterra CAD 02\\Documents\\GitHub\\pjbrich.github.io\\python '
    'scripts\\build\\waterEstimations\\localpycs\\pyimod04_pywin32.pyc',
    'PYMODULE'),
   ('pyiboot01_bootstrap',
@@ -87,7 +87,7 @@
    '02\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\libcrypto-3.dll',
    'BINARY'),
   ('base_library.zip',
-   'C:\\Users\\Exlterra CAD 02\\Documents\\Github\\pjbrich.github.io\\python '
+   'C:\\Users\\Exlterra CAD 02\\Documents\\GitHub\\pjbrich.github.io\\python '
    'scripts\\build\\waterEstimations\\base_library.zip',
    'DATA')],
  'python312.dll',

@@ -1,6 +1,6 @@
-(['C:\\Users\\Exlterra CAD 02\\Documents\\Github\\pjbrich.github.io\\python '
+(['C:\\Users\\Exlterra CAD 02\\Documents\\GitHub\\pjbrich.github.io\\python '
   'scripts\\waterEstimations.py'],
- ['C:\\Users\\Exlterra CAD 02\\Documents\\Github\\pjbrich.github.io\\python '
+ ['C:\\Users\\Exlterra CAD 02\\Documents\\GitHub\\pjbrich.github.io\\python '
   'scripts'],
  [],
  ['C:\\Users\\Exlterra CAD '
@@ -419,9 +419,17 @@
    'C:\\Users\\Exlterra CAD '
    '02\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\ast.py',
    'PYMODULE'),
+  ('_py_abc',
+   'C:\\Users\\Exlterra CAD '
+   '02\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\_py_abc.py',
+   'PYMODULE'),
   ('tracemalloc',
    'C:\\Users\\Exlterra CAD '
    '02\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('stringprep',
+   'C:\\Users\\Exlterra CAD '
+   '02\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\stringprep.py',
    'PYMODULE'),
   ('subprocess',
    'C:\\Users\\Exlterra CAD '
@@ -430,14 +438,6 @@
   ('signal',
    'C:\\Users\\Exlterra CAD '
    '02\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\signal.py',
-   'PYMODULE'),
-  ('_py_abc',
-   'C:\\Users\\Exlterra CAD '
-   '02\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\_py_abc.py',
-   'PYMODULE'),
-  ('stringprep',
-   'C:\\Users\\Exlterra CAD '
-   '02\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\stringprep.py',
    'PYMODULE')],
  [('python312.dll',
    'C:\\Users\\Exlterra CAD '
@@ -482,6 +482,6 @@
  [],
  [],
  [('base_library.zip',
-   'C:\\Users\\Exlterra CAD 02\\Documents\\Github\\pjbrich.github.io\\python '
+   'C:\\Users\\Exlterra CAD 02\\Documents\\GitHub\\pjbrich.github.io\\python '
    'scripts\\build\\waterEstimations\\base_library.zip',
    'DATA')])

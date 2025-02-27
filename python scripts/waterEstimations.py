@@ -26,11 +26,11 @@ while userchoice == "y" or userchoice == "":
     timeToInfiltrate = waterVolumeCF / cubicOverHour
     #output the total hours of infiltration
     print(f"\nTotal GEPS units: {totalGEPS}")
-    print(f"Total Gallons per Hour: {galOverHour}")
-    print(f"Total Cubic Feet per Hour: {cubicOverHour:.2f}")
+    print(f"Total Gallons infiltrated per Hour: {galOverHour}")
+    print(f"Total Cubic Feet infiltrated per Hour: {cubicOverHour:.2f}")
     print (f"Water Volume in Cubic Feet: {waterVolumeCF:.2f}")
     print(f"Total hours of infiltration: {timeToInfiltrate:.2f}")
-    userchoice = input("Would you like to calculate the total hours of infiltration? (y/n):")
+    userchoice = input("\nWould you like to calculate the total hours of infiltration? (y/n):")
     
 print("Thank you for using the Infiltration Estimator!")
 

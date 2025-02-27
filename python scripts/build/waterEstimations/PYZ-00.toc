@@ -1,4 +1,4 @@
-('C:\\Users\\Exlterra CAD 02\\Documents\\Github\\pjbrich.github.io\\python '
+('C:\\Users\\Exlterra CAD 02\\Documents\\GitHub\\pjbrich.github.io\\python '
  'scripts\\build\\waterEstimations\\PYZ-00.pyz',
  [('_compat_pickle',
    'C:\\Users\\Exlterra CAD '
