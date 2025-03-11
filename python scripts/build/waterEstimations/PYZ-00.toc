@@ -388,6 +388,10 @@
    'C:\\Users\\Exlterra CAD '
    '02\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\tkinter\\messagebox.py',
    'PYMODULE'),
+  ('tkinter.ttk',
+   'C:\\Users\\Exlterra CAD '
+   '02\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\tkinter\\ttk.py',
+   'PYMODULE'),
   ('token',
    'C:\\Users\\Exlterra CAD '
    '02\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\token.py',
