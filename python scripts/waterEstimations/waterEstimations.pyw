@@ -2,6 +2,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
+import math 
 
 
 def calculate_infiltration(event=None):
@@ -21,6 +22,13 @@ def calculate_infiltration(event=None):
         cubic_over_hour = gal_over_hour / 7.48
         water_volume = surface_area * depth_in
         time_to_infiltrate = water_volume / cubic_over_hour
+        
+        #need to convert time_to_infiltrate in HH:MM, split up the time 
+        integer_part = math.trunc(time_to_infiltrate)
+        fract_part = time_to_infiltrate - integer_part
+
+        fract_part_int = turnIntoHHMM(fract_part)
+
 
         #-----------------------------METRIC---------------------------------------------
 
@@ -28,6 +36,16 @@ def calculate_infiltration(event=None):
         depth_m = depth / 1000
         water_volume_m = surface_area * depth_m
         time_to_infiltrate_m = water_volume_m / cubic_meter_over_hour
+
+           #need to convert time_to_infiltrate in HH:MM, split up the time 
+        integer_part_m = math.trunc(time_to_infiltrate_m)
+        fract_part_m = time_to_infiltrate_m - integer_part_m
+
+        fract_part_int_m = turnIntoHHMM(fract_part_m)
+
+        #fract_part_m = fract_part_m * 60
+        #fract_part_m = math.ceil(fract_part_m)
+        #fract_part_int = int(fract_part_m) + (1 if fract_part_m > int(fract_part_m) else 0)
 
         # Display results
         #--------------------------------------------------------------------------------
@@ -44,7 +62,8 @@ def calculate_infiltration(event=None):
             result_text.insert(tk.END, f"Total Cubic Feet infiltrated per Day: {cubic_over_hour*24:.2f}\n", "body")
 
             result_text.insert(tk.END, f"Water Volume in Cubic Feet: {water_volume:.2f}\n", "body")
-            result_text.insert(tk.END, f"Total hours to infiltrate {water_volume:.2f}cf of water: {time_to_infiltrate:.2f}", "body")
+            result_text.insert(tk.END, f"Total hours to infiltrate {water_volume:.2f}cf of water: {integer_part} hours and {fract_part_int} minutes", "body")
+            #result_text.insert(tk.END, f"Total hours to infiltrate {water_volume:.2f}cf of water: {time_to_infiltrate:.2f}", "body")
         else:
              # Update result display
             result_text.delete(1.0, tk.END)
@@ -56,7 +75,9 @@ def calculate_infiltration(event=None):
             result_text.insert(tk.END, f"Total Cubic Meter infiltrated per Hour: {cubic_meter_over_hour:.2f}\n", "body")
             result_text.insert(tk.END, f"Total Cubic Meter infiltrated per Day: {cubic_meter_over_hour*24:.2f}\n", "body")
             result_text.insert(tk.END, f"Water Volume in Cubic meters: {water_volume_m:.2f}\n", "body")
-            result_text.insert(tk.END, f"Total hours to infiltrate {water_volume_m:.2f}m^3 of water: {time_to_infiltrate_m:.2f}", "body")
+            result_text.insert(tk.END, f"Total hours to infiltrate {water_volume_m:.2f} cubic meters of water: {integer_part_m} hours and {fract_part_int_m} minutes", "body")
+
+            #result_text.insert(tk.END, f"Total hours to infiltrate {water_volume_m:.2f}m^3 of water: {time_to_infiltrate_m:.2f}", "body")
     except ValueError:
         messagebox.showerror("Error", "Please enter valid numeric values.")
 
@@ -69,6 +90,21 @@ def update_labels(event):
         area_label.config(text="Surface area of water (sq m):")
         depth_label.config(text="Depth of water (mm):")
         calculate_infiltration()
+
+#turns the fractional hours lopped off during truncation, and turns it into whole minutes!
+def turnIntoHHMM (time):
+    
+    time = time * 60
+    time = math.ceil(time)
+    newTime = int(time) + (1 if time > int(time) else 0)
+    return newTime
+
+def turnIntoDDHH (time):
+    
+    time = time * 60
+    time = math.ceil(time)
+    newTime = int(time) + (1 if time > int(time) else 0)
+    return newTime
 
 # Create the main window
 window = tk.Tk()
