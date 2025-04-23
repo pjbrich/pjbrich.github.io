@@ -1,3 +1,2 @@
-﻿!s::
-Send, {F3}
+﻿!s::Send {F3}
 return

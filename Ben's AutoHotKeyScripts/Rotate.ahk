@@ -1,3 +1,3 @@
 ﻿!q::
-Send, rotate{Enter}
+Send rotate{Enter}
 return
