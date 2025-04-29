@@ -1,3 +1,3 @@
 ﻿!x::
-Send Polyline{Enter}
+Send, POLYLINE{Enter}
 return

@@ -1,3 +1,3 @@
 ﻿!g::
-Send, Group{Enter}
+Send group{Enter}
 return
